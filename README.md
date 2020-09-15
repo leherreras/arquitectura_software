@@ -1,5 +1,6 @@
 # SoftwareArquitecture
 
+# Front end
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 
 ## Development server
@@ -25,3 +26,24 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+# Back end
+
+Access to back folder of the project
+
+## Install
+
+Install requirements with the next command line in terminal
+
+`pip -r install requirements.txt`
+
+## Run the project
+
+`python app.py`
+
+
+This project will be run in the ports:
+
+Back 4201
+
+Front 4200
