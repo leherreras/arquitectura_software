@@ -1,20 +1,22 @@
-from flask import Flask
-import os
-import codecs
-import requests
+from flask import jsonify
 
-app = Flask(__name__)
-app.secret_key = codecs.encode(os.urandom(32), 'hex')
+from src.apps.authentication.api import LoginView
+from src.apps.pokemon.api import PokemonView
+from src.apps.user.api import UserView
+from src.views import app
+import requests
 
 
 @app.route('/')
 def index():
-    url = "https://pokeapi.co/api/v2/"
-    path = "pokemon/ditto"
-    res = requests.get(url + path)
 
-    return res.json()
+    return jsonify({"info": "Por favor registrese en el sistema"})
 
+
+UserView.register(app)
+PokemonView.register(app)
+LoginView.register(app)
 
 if __name__ == "__main__":
-    app.run(debug=True, port=4201, host="0.0.0.0")
+    app.run(debug=True, port=4201, host="127.0.0.1")
+

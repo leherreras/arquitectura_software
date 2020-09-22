@@ -1,3 +1,5 @@
 Flask
-requests
-SQLAlchemy
+Flask-Login
+Flask-Classy
+Requests
+Flask-SQLAlchemy
