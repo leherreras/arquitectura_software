@@ -1,0 +1,11 @@
+.header{
+    background-image: url(https://teambeyond.net/wp-content/uploads/2016/07/Pokemon-Header.jpg);
+    background-size: 100% 100%;
+    background-repeat: repeat ;
+    background-position: center;
+    position: fixed;
+    margin: 0;
+    padding: 80px;
+    left: 0;
+    width: 100%;
+}
