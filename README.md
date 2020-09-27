@@ -37,9 +37,6 @@ Install requirements with the next command line in terminal
 
 `pip install -r requirements.txt`
 
-Install DB proyect
-`python utils/install.py`
-
 ## Run the project
 
 `python app.py`
