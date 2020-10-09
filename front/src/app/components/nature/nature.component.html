@@ -1,0 +1,13 @@
+<div class="row">
+  <div *ngFor="let result of dataResults['results']" class="card border-dark col-sm-3" style="width: 18rem;">
+    <div class="card-header">
+      <h5>Nombre: {{result.name}}</h5>
+    </div>
+    <div class="card-body">
+      <p class="card-text">Info Nature</p>
+    </div>
+    <div class="card-footer">
+      <a href="{{result.url}}" class="btn btn-primary">Detalle de la naturaleza</a>
+    </div>
+  </div>
+</div>

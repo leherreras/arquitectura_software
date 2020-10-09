@@ -3,3 +3,4 @@ Flask-Login
 Flask-Classy
 Requests
 Flask-SQLAlchemy
+Flask-Cors

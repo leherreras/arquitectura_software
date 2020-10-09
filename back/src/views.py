@@ -1,10 +1,11 @@
 import codecs
 import os
-
+from flask_cors import CORS
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
+CORS(app)
 app.secret_key = codecs.encode(os.urandom(32), 'hex')
 db_name = 'architecture.db'
 
