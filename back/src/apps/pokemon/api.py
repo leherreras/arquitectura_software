@@ -2,8 +2,12 @@ import requests
 from flask import jsonify
 from flask_classy import FlaskView, route
 
+from src.utils.utils import valid_request
+
 
 class PokemonView(FlaskView):
+    decorators = [valid_request()]
+
 
     # # POKEMON
     # # Abilities
@@ -11,7 +15,10 @@ class PokemonView(FlaskView):
     def abilities(self):
         url = "https://pokeapi.co/api/v2/ability"
         res = requests.get(url)
-        return jsonify(res.json())
+        if res.status_code == 404:
+            return jsonify({"error": "el artefacto no existe"})
+        else:
+            return jsonify(res.json())
 
     @route('/ability/<parametro>')
     def ability(self, parametro):
