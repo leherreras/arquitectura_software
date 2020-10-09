@@ -70,17 +70,20 @@
 
   /*Estilos para el Section Principal del proyecto*/
   .content2 {
-    width: 82%;
-    height: 29rem;
+    width:100%;
+    height: 100rem;
+    background-color:red;
   }
   .contenedorCentral {
-    width: 95%;
+    width: 50%;
     height: 100%;
-  }
+    background-color: coral;
+    }
   .contenedor {
     background : "#30475e";
     padding : .8rem;
     border-radius: .8rem;
+    background-color: rgb(81, 40, 179);
   }
 
 
@@ -90,7 +93,7 @@
   :host {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     font-size: 14px;
-    color: #333;
+    color: rgb(212, 28, 28);
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -112,19 +115,19 @@
   .spacer {
     flex: 1;
   }
-
   .toolbar {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     height: 80px;
-    display: flex;
+    display:flex;
     align-items: center;
     background-color:rgb(168, 235, 198);
     color: white;
     font-weight: 600;
   }
+
 
   .toolbar img {
     margin: 0 16px;
@@ -143,7 +146,7 @@
   .card svg.material-icons path {
     fill: #888;
   }
-
+  
   .card {
     border-radius: 4px;
     border: 1px solid #eee;
@@ -184,7 +187,7 @@
 
   .card.highlight-card {
     background-color: #1976d2;
-    color: white;
+    color: rgb(247, 0, 0);
     font-weight: 600;
     border: none;
     width: auto;
