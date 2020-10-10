@@ -1,0 +1,177 @@
+<div class="form-group row">
+    <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+            <img src="{{dataResults.sprites.front_default}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{ dataResults.name }}</h5>
+                <p class="card-text"></p>
+            </div>
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">Experiencia:{{dataResults.base_experience}} </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="col-md-8">
+        <div class="accordion" id="accordionExample">
+            <div class="card">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left" type="button" data-toggle="collapse"
+                            data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Habilidades
+                        </button>
+                    </h2>
+                </div>
+
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                    data-parent="#accordionExample">
+                    <div class="card-body">
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Slot</th>
+                                <th scope="col">Name</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let ability of dataResults['abilities']">
+                                <th scope="row">{{ability.slot}}</th>
+                                <td> {{ability.ability.name}}</td>
+                              </tr>                                  
+                            </tbody>
+                 
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingTwo">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Indices de juego
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                    <div class="card-body">                     
+                            <table class="table">
+                                <thead>
+                                  <tr>
+                                    <th scope="col">Indice</th>
+                                    <th scope="col">Nombre</th>
+                                  
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr *ngFor="let game of dataResults['game_indices']">
+                                    <th scope="row">{{game.game_index}}</th>
+                                    <td> {{game.version.name}}</td>
+                                    
+                                  </tr>                                  
+                                </tbody>
+                     
+                            </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Moves
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div *ngFor="let move of dataResults['moves']">
+                           <center><h5> Movimiento: {{move.move.name}}</h5></center>
+                            <div class="card-body">
+                                <table class="table">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Nombre method</th>
+                                        <th scope="col">Name Grupo</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr *ngFor="let version of move['version_group_details']">
+                                        <th scope="row">{{version.move_learn_method.name}}</th>
+                                        <td> {{version.version_group.name}}</td>
+                                      </tr>                                  
+                                    </tbody>
+                         
+                                </table>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="heading4">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                            Stats
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+                    <div class="card-body">                        
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Base stat</th>
+                                <th scope="col">Effort</th>
+                                <th scope="col">Name</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let stat of dataResults['stats']">
+                                <th scope="row">{{stat.base_stat}}</th>
+                                <td> {{stat.effort}}</td>
+                                <td> {{stat.stat.name}}</td>
+                              </tr>                                  
+                            </tbody>
+                 
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header" id="heading5">
+                    <h2 class="mb-0">
+                        <button class="btn btn-link btn-block text-left collapsed" type="button" data-toggle="collapse"
+                            data-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                            Types
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
+                    <div class="card-body">                        
+                        <table class="table">
+                            <thead>
+                              <tr>
+                                <th scope="col">Slot</th>
+                                <th scope="col">Name</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let type of dataResults['types']">
+                                <th scope="row">{{type.slot}}</th>
+                                <td> {{type.type.name}}</td>
+                              </tr>                                  
+                            </tbody>
+                 
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

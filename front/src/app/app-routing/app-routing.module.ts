@@ -8,7 +8,7 @@ import {GenderComponent} from "../components/gender/gender.component";
 import {GrowthRateComponent} from "../components/growth-rate/growth-rate.component";
 import {NatureComponent} from "../components/nature/nature.component";
 import {PokeathlonStatComponent} from "../components/pokeathlon-stat/pokeathlon-stat.component";
-
+import {PokemonDetalleComponent} from "../components/pokemon-detalle/pokemon-detalle.component";
 const routes: Routes = [
   {path: 'ability', component: AbilityComponent},
   {path: 'characteristic', component: CharacteristicComponent},
@@ -18,6 +18,7 @@ const routes: Routes = [
   {path: 'nature', component: NatureComponent},
   {path: 'pokeathlon-stat', component: PokeathlonStatComponent},
   {path: 'pokemon', component: PokemonComponent},
+  {path: 'pokemon-detalle/:name', component: PokemonDetalleComponent},
   {path: '**', component: PokemonComponent}
 ];
 

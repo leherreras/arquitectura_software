@@ -15,6 +15,8 @@ import { EggGroupComponent } from './components/egg-group/egg-group.component';
 import {AbilityComponent} from './components/ability/ability.component';
 import {RouterModule} from '@angular/router';
 import {AppRoutingModule} from './app-routing/app-routing.module';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { PokemonDetalleComponent } from './components/pokemon-detalle/pokemon-detalle.component';
 
 @NgModule({
   declarations: [
@@ -28,13 +30,15 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
     NatureComponent,
     PokeathlonStatComponent,
     PokemonComponent,
-    EggGroupComponent
+    EggGroupComponent,
+    PokemonDetalleComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
