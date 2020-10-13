@@ -3,7 +3,7 @@
         <div class="card" style="width: 18rem;">
             <img src="{{dataResults.sprites.front_default}}" class="card-img-top" alt="...">
             <div class="card-body">
-                <h5 class="card-title">{{ dataResults.name }}</h5>
+                <h5 class="card-title">{{ dataResults.name | titlecase }}</h5>
                 <p class="card-text"></p>
             </div>
             <ul class="list-group list-group-flush">
@@ -39,9 +39,9 @@
                               <tr *ngFor="let ability of dataResults['abilities']">
                                 <th scope="row">{{ability.slot}}</th>
                                 <td> {{ability.ability.name}}</td>
-                              </tr>                                  
+                              </tr>
                             </tbody>
-                 
+
                         </table>
                     </div>
                 </div>
@@ -56,23 +56,23 @@
                     </h2>
                 </div>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-                    <div class="card-body">                     
+                    <div class="card-body">
                             <table class="table">
                                 <thead>
                                   <tr>
                                     <th scope="col">Indice</th>
                                     <th scope="col">Nombre</th>
-                                  
+
                                   </tr>
                                 </thead>
                                 <tbody>
                                   <tr *ngFor="let game of dataResults['game_indices']">
                                     <th scope="row">{{game.game_index}}</th>
                                     <td> {{game.version.name}}</td>
-                                    
-                                  </tr>                                  
+
+                                  </tr>
                                 </tbody>
-                     
+
                             </table>
                     </div>
                 </div>
@@ -102,13 +102,13 @@
                                       <tr *ngFor="let version of move['version_group_details']">
                                         <th scope="row">{{version.move_learn_method.name}}</th>
                                         <td> {{version.version_group.name}}</td>
-                                      </tr>                                  
+                                      </tr>
                                     </tbody>
-                         
+
                                 </table>
                             </div>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>
@@ -122,7 +122,7 @@
                     </h2>
                 </div>
                 <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
-                    <div class="card-body">                        
+                    <div class="card-body">
                         <table class="table">
                             <thead>
                               <tr>
@@ -136,9 +136,9 @@
                                 <th scope="row">{{stat.base_stat}}</th>
                                 <td> {{stat.effort}}</td>
                                 <td> {{stat.stat.name}}</td>
-                              </tr>                                  
+                              </tr>
                             </tbody>
-                 
+
                         </table>
                     </div>
                 </div>
@@ -153,7 +153,7 @@
                     </h2>
                 </div>
                 <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
-                    <div class="card-body">                        
+                    <div class="card-body">
                         <table class="table">
                             <thead>
                               <tr>
@@ -165,9 +165,9 @@
                               <tr *ngFor="let type of dataResults['types']">
                                 <th scope="row">{{type.slot}}</th>
                                 <td> {{type.type.name}}</td>
-                              </tr>                                  
+                              </tr>
                             </tbody>
-                 
+
                         </table>
                     </div>
                 </div>

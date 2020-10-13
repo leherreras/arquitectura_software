@@ -13,7 +13,7 @@ export class EggGroupComponent implements OnInit {
   constructor(private http: PokemonService) {
   }
 
-  ngOnInit(): any {
+  ngOnInit(): void {
     this.http.getAllEggGroups().subscribe(
       data => {
         console.log(data);

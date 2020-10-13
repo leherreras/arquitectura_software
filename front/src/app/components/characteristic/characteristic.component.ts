@@ -13,7 +13,7 @@ export class CharacteristicComponent implements OnInit {
   constructor(private http: PokemonService) {
   }
 
-  ngOnInit(): any {
+  ngOnInit(): void {
     this.http.getAllCharacteristics().subscribe(
       data => {
         console.log(data);

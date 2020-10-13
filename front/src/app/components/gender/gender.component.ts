@@ -13,7 +13,7 @@ export class GenderComponent implements OnInit {
   constructor(private http: PokemonService) {
   }
 
-  ngOnInit(): any {
+  ngOnInit(): void {
     this.http.getAllGenders().subscribe(
       data => {
         console.log(data);

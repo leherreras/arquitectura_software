@@ -13,7 +13,7 @@ export class PokemonComponent implements OnInit {
   constructor(private http: PokemonService) {
   }
 
-  ngOnInit(): any {
+  ngOnInit(): void {
     this.http.getAllPokemones().subscribe(
       data => {
         console.log(data);

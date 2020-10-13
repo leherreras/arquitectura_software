@@ -13,7 +13,7 @@ export class PokeathlonStatComponent implements OnInit {
   constructor(private http: PokemonService) {
   }
 
-  ngOnInit(): any {
+  ngOnInit(): void {
     this.http.getAllPokeathlonStates().subscribe(
       data => {
         console.log(data);

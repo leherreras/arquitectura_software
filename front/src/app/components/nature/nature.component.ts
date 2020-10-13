@@ -13,7 +13,7 @@ export class NatureComponent implements OnInit {
   constructor(private http: PokemonService) {
   }
 
-  ngOnInit(): any {
+  ngOnInit(): void {
     this.http.getAllNatures().subscribe(
       data => {
         console.log(data);

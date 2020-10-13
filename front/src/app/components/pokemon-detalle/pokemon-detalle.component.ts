@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {PokemonService} from '../../services/pokemon.service';
-import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-pokemon-detalle',
@@ -11,31 +10,29 @@ import {Observable} from 'rxjs';
 export class PokemonDetalleComponent implements OnInit {
   dataResults: Pokemon;
 
-  constructor(private http: PokemonService,private route: ActivatedRoute) {
+  constructor(private http: PokemonService, private route: ActivatedRoute) {
   }
 
-  
-  ngOnInit(){
-    var name = this.route.snapshot.paramMap.get('name');
+  ngOnInit(): void{
+    const name = this.route.snapshot.paramMap.get('name');
     console.log(name);
     this.http.getAllPokemon(name).subscribe(
       (data: Pokemon) => {
         console.log(data.name);
-        this.dataResults =  data;            
+        this.dataResults =  data;
       }
     );
   }
-  
 
 }
 export interface Pokemon {
-  name: string; 
+  name: string;
   base_experience: string;
   sprites: Sprites;
 
 }
 
 export interface Sprites {
-  front_default: string; 
+  front_default: string;
 }
 

@@ -13,7 +13,7 @@ export class AbilityComponent implements OnInit {
   constructor(private http: PokemonService) {
   }
 
-  ngOnInit(): any {
+  ngOnInit(): void {
     this.http.getAllAbilities().subscribe(
       data => {
         console.log(data);

@@ -13,7 +13,7 @@ export class GrowthRateComponent implements OnInit {
   constructor(private http: PokemonService) {
   }
 
-  ngOnInit(): any {
+  ngOnInit(): void {
     this.http.getAllGrowthRates().subscribe(
       data => {
         console.log(data);
